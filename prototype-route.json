@@ -1,0 +1,184 @@
+{
+  "state_name": "Home Page (Onboarding Step 1)",
+  "state_url": "/?onboard=1",
+  "children": [
+    {
+      "interaction": "Click 'Got it!' on step 1",
+      "state_name": "Home Page (Onboarding Step 2)",
+      "state_url": "/?onboard=2",
+      "children": [
+        {
+          "interaction": "Click 'Got it!' on step 2",
+          "state_name": "Home Page (Default)",
+          "state_url": "/?onboard=done",
+          "children": [
+            {
+              "interaction": "Click 'Show All' on Portfolio list",
+              "state_name": "Home Page - Expanded Portfolio",
+              "state_url": "/?onboard=done&expand=true",
+              "children": []
+            },
+            {
+              "interaction": "Click 'Plus' button to record",
+              "state_name": "Post-trade Record Entry",
+              "state_url": "/?onboard=done&record=open",
+              "children": []
+            },
+            {
+              "interaction": "Switch Home Asset Tab to ETFs",
+              "state_name": "Home Page - ETFs Tab",
+              "state_url": "/?onboard=done&asset=ETFs",
+              "children": []
+            },
+            {
+              "interaction": "Switch Home Asset Tab to Bonds",
+              "state_name": "Home Page - Bonds Tab",
+              "state_url": "/?onboard=done&asset=Bonds",
+              "children": []
+            },
+            {
+              "interaction": "Switch Home Asset Tab to Crypto",
+              "state_name": "Home Page - Crypto Tab",
+              "state_url": "/?onboard=done&asset=Crypto",
+              "children": []
+            },
+            {
+              "interaction": "Click on winning trade item (ZIJIN MINING)",
+              "state_name": "Trade Detail Page - Winning (Top)",
+              "state_url": "/detail/1",
+              "children": [
+                {
+                  "interaction": "Scroll down to view Trade Records",
+                  "state_name": "Trade Detail Page - Records",
+                  "state_url": "/detail/1?scroll=record-section",
+                  "children": [
+                    {
+                      "interaction": "Scroll down to view AI Analysis",
+                      "state_name": "Trade Detail Page - AI Analysis",
+                      "state_url": "/detail/1?scroll=ai-section",
+                      "children": [
+                        {
+                          "interaction": "Scroll down to view User Notes",
+                          "state_name": "Trade Detail Page - User Notes (Timeline)",
+                          "state_url": "/detail/1?scroll=notes-section",
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "interaction": "Click floating Agent button",
+                  "state_name": "Agent Page (Winning Trade)",
+                  "state_url": "/agent?trade=1",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "interaction": "Click on losing trade item (JEREH)",
+              "state_name": "Trade Detail Page - Losing (Top)",
+              "state_url": "/detail/2",
+              "children": [
+                {
+                  "interaction": "Scroll down to view AI Analysis",
+                  "state_name": "Trade Detail Page - AI Analysis (Losing)",
+                  "state_url": "/detail/2?scroll=ai-section",
+                  "children": [
+                    {
+                      "interaction": "Scroll down to view User Notes",
+                      "state_name": "Trade Detail Page - User Notes (Empty State)",
+                      "state_url": "/detail/2?scroll=notes-section",
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "interaction": "Click floating Agent button",
+                  "state_name": "Agent Page (Losing Trade)",
+                  "state_url": "/agent?trade=2",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "interaction": "Navigate to Tracking",
+              "state_name": "Tracking Page (Daily)",
+              "state_url": "/report",
+              "children": [
+                {
+                  "interaction": "Switch to Weekly Tracking",
+                  "state_name": "Weekly Tracking Page",
+                  "state_url": "/report?period=week",
+                  "children": []
+                },
+                {
+                  "interaction": "Switch to Monthly Tracking",
+                  "state_name": "Monthly Tracking Page",
+                  "state_url": "/report?period=month",
+                  "children": []
+                },
+                {
+                  "interaction": "Switch to Quarterly Tracking",
+                  "state_name": "Quarterly Tracking Page",
+                  "state_url": "/report?period=quarter",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "interaction": "Navigate to Strategy",
+              "state_name": "Strategy Page",
+              "state_url": "/strategy",
+              "children": [
+                {
+                  "interaction": "Switch to Master holdings",
+                  "state_name": "Strategy - Master Tab",
+                  "state_url": "/strategy?tab=master",
+                  "children": []
+                }
+              ]
+            },
+            {
+              "interaction": "Navigate to Agent",
+              "state_name": "Agent Page",
+              "state_url": "/agent",
+              "children": [
+                {
+                  "interaction": "Click 'Daily Report' quick action",
+                  "state_name": "Agent Page - Daily Report",
+                  "state_url": "/agent?action=daily",
+                  "children": []
+                },
+                {
+                  "interaction": "Click 'Weekly Report' quick action",
+                  "state_name": "Agent Page - Weekly Report",
+                  "state_url": "/agent?action=weekly",
+                  "children": []
+                },
+                {
+                  "interaction": "Click 'Set Reminder' quick action",
+                  "state_name": "Agent Page - Set Reminder",
+                  "state_url": "/agent?action=reminder",
+                  "children": []
+                },
+                {
+                  "interaction": "Click 'Trade Plan' quick action",
+                  "state_name": "Agent Page - Trade Plan",
+                  "state_url": "/agent?action=plan",
+                  "children": []
+                },
+                {
+                  "interaction": "Click 'Behavior Insights' quick action",
+                  "state_name": "Agent Page - Behavior Insights",
+                  "state_url": "/agent?action=insights",
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
